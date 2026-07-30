@@ -8,63 +8,66 @@ Implementation and evaluation framework for measuring whether empirical conseque
 
 Modern AI evaluation primarily measures capability:
 
-\[
+$$
 P(\text{correct output} \mid \text{input}, M)
-\]
+$$
 
 where performance is evaluated under a fixed or assumed world model.
 
 Adaptive Inheritance studies a complementary question:
 
-> When a system's assumptions become invalid, can reality still modify the mechanisms responsible for future behavior?
+> **When a system's assumptions become invalid, can reality still modify the mechanisms responsible for future behavior?**
 
 The framework formalizes this property as **Adaptive Corrigibility**:
 
-> The measurable capacity of a system's future mechanism distribution to be causally altered by unblocked empirical consequences.
+> **The measurable capacity of a system's future mechanism distribution to be causally altered by unblocked empirical consequences.**
 
 The central invariant is the **Adaptive Inheritance Criterion (AIC)**:
 
-\[
+$$
 \boxed{
-E^* \Longrightarrow \exists w_i \in W_{\text{invalid}}:
+E^*
+\Longrightarrow
+\exists w_i \in W_{\text{invalid}} :
 \frac{dw_i}{dt}<0
 }
-\]
+$$
 
-Where:
+where:
 
-- \(E^*\) represents unblocked empirical contradiction.
-- \(w_i\) represents the causal authority of an active mechanism.
-- Invalidated mechanisms must lose future influence.
+- **$E^*$** — unblocked empirical contradiction
+- **$w_i$** — the causal authority of an active mechanism
 
-A system is adaptively corrigible when empirical consequences retain causal influence over the mechanisms generating future behavior.
+Invalidated mechanisms must lose future influence.
+
+A system is **adaptively corrigible** when empirical consequences retain causal influence over the mechanisms generating future behavior.
 
 ---
 
 # Scientific Positioning
 
-Adaptive Inheritance is not a claim that all intelligent systems are necessarily corrigible.
+Adaptive Inheritance is **not** a claim that all intelligent systems are necessarily corrigible.
 
 Instead, it defines and measures one specific adaptive property:
 
-> Whether empirical consequences retain causal authority over the future mechanisms governing system behavior.
+> **Whether empirical consequences retain causal authority over the future mechanisms governing system behavior.**
 
 The framework treats corrigibility as an empirical control characteristic rather than a normative assumption.
 
 Adaptive Corrigibility is therefore distinct from classical alignment concepts such as:
 
-- shutdownability,
-- instruction obedience,
-- human intervention acceptance,
-- preference alignment.
+- shutdownability
+- instruction obedience
+- human intervention acceptance
+- preference alignment
 
 The focus is narrower:
 
-\[
+$$
 \boxed{
 \text{Can reality still rewrite the mechanism distribution?}
 }
-\]
+$$
 
 ---
 
