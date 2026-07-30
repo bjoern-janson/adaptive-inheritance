@@ -281,27 +281,27 @@ RAHU measures whether invalidated mechanisms lose operational influence after em
 
 # Repository Structure
 
+```text
 adaptive-inheritance/
-
 ├── docs/
-│ ├── architecture_spec.md
-│ ├── metric_definitions.md
-│ ├── rahu_protocol.md
-│ └── falsification_tests.md
+│   ├── architecture_spec.md
+│   ├── metric_definitions.md
+│   ├── rahu_protocol.md
+│   └── falsification_tests.md
 │
 ├── src/
-│ ├── ptvs/
-│ ├── mrat/
-│ ├── inheritance/
-│ ├── ree/
-│ └── rahu/
+│   ├── ptvs/
+│   ├── mrat/
+│   ├── inheritance/
+│   ├── ree/
+│   └── rahu/
 │
 └── tests/
-├── test_ptvs.py
-├── test_mrat.py
-├── test_inheritance.py
-└── test_rahu.py
-
+    ├── test_ptvs.py
+    ├── test_mrat.py
+    ├── test_inheritance.py
+    └── test_rahu.py
+```
 ---
 
 # Documentation
