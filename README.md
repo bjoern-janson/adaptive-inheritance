@@ -118,23 +118,25 @@ The framework is organized as a five-layer adaptive control stack:
 
 # Core Components
 
+---
+
 ## PTVS Telemetry
 
-Polynomial-Time Verification Schemas (PTVS) provide local trajectory admissibility telemetry.
+**Polynomial-Time Verification Schemas (PTVS)** provide local trajectory admissibility telemetry.
 
 Rather than evaluating only final outputs, PTVS evaluates whether intermediate candidate trajectories remain compatible with environmental constraints.
 
-Primary output:
+**Primary output**
 
-\[
+$$
 LBR_t =
 \frac{\text{inadmissible trajectories}}
 {\text{total trajectories}}
-\]
+$$
 
 PTVS answers:
 
-> Where did candidate mechanisms lose empirical admissibility?
+> **Where did candidate mechanisms lose empirical admissibility?**
 
 ---
 
@@ -142,29 +144,29 @@ PTVS answers:
 
 The **Minimal Residual Attribution Test (MRAT)** routes observed failures to the lowest-cost structural layer capable of correction.
 
-The routing operator:
+**The routing operator**
 
-\[
+$$
 \Phi_R(e_t)
 \rightarrow
 (a_N,a_S,a_M,a_R,a_G)
-\]
+$$
 
 where:
 
-- \(N\): Noise
-- \(S\): State error
-- \(M\): Mechanism deficit
-- \(R\): Representation saturation
-- \(G\): Generator decoupling
+- **$N$** — Noise
+- **$S$** — State error
+- **$M$** — Mechanism deficit
+- **$R$** — Representation saturation
+- **$G$** — Generator decoupling
 
 MRAT answers:
 
-> What level of internal structure must change?
+> **What level of internal structure must change?**
 
 The system prioritizes:
 
-\[
+$$
 C_{\text{noise}}
 <
 C_{\text{state}}
@@ -174,31 +176,37 @@ C_{\text{mechanism}}
 C_{\text{representation}}
 <
 C_{\text{generator}}
-\]
+$$
 
 ---
 
 ## Adaptive Inheritance Engine
 
-The Adaptive Inheritance Engine maintains mechanism authority weights:
+The **Adaptive Inheritance Engine** maintains mechanism authority weights:
 
-\[
-W_t =
-\{w_1,w_2,...,w_n\}
-\]
+$$
+W_t
+=
+\{w_1,w_2,\ldots,w_n\}
+$$
 
 and applies empirical attenuation:
 
-\[
+$$
 w_i^{t+1}
 =
 w_i^t
-(1-\lambda(1-\mathcal{A}_{adm,i}))
-\]
+\left(
+1-\lambda
+\left(
+1-\mathcal{A}_{adm,i}
+\right)
+\right)
+$$
 
 The engine measures whether failed mechanisms lose future causal authority.
 
-Primary metrics:
+**Primary metrics**
 
 - Authority Retention Ratio (ARR)
 - Mechanism Authority Half-Life
@@ -208,31 +216,33 @@ Primary metrics:
 
 ## REE Engine
 
-Recursive Representation Expansion (REE) is not an automatic response to failure.
+**Recursive Representation Expansion (REE)** is not an automatic response to failure.
 
 Representation expansion is admissible only when:
 
-\[
-\hat{\Gamma}_{B_{max}}\approx e_t
-\]
+$$
+\hat{\Gamma}_B^{\max}
+\approx
+e_t
+$$
 
-and:
+and
 
-\[
-\hat{\Delta V}_{future}
+$$
+\hat{\Delta V}_{\text{future}}
 >
-\Delta C_{representation}
-\]
+\Delta C_{\text{representation}}
+$$
 
 The system expands only when:
 
-1. Lower-cost explanations are insufficient.
-2. Current representation capacity is saturated.
-3. Additional structure provides measurable adaptive value.
+- lower-cost explanations are insufficient
+- current representation capacity is saturated
+- additional structure provides measurable adaptive value
 
 REE is intentionally conservative.
 
-Failure alone does not justify representation expansion.
+Failure alone does **not** justify representation expansion.
 
 ---
 
@@ -242,17 +252,16 @@ The **Reality-Adversarial Hypothesis Updating (RAHU)** benchmark evaluates adapt
 
 RAHU measures whether invalidated mechanisms lose operational influence after empirical failure.
 
-Primary observables:
+**Primary observables**
 
 - Latent Branch Ratio (LBR)
-- Post-error confidence (\(C_{post}\))
-- Mechanism update rate (\(R_{update}\))
-- Structural correction velocity (\(V_{corr}\))
+- Post-error confidence (**$C_{\text{post}}$**)
+- Mechanism update rate (**$R_{\text{update}}$**)
+- Structural correction velocity (**$V_{\text{corr}}$**)
 - Authority Retention Ratio (ARR)
 - Adaptive Decoupling Index (ADI)
 - Adaptive Corrigibility Score (ACS)
-- Adaptive response latency (\(\tau_{adapt}\))
-
+- Adaptive response latency (**$\tau_{\text{adapt}}$**)
 ---
 
 # Evaluation Metrics
