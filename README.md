@@ -206,7 +206,7 @@ $$
 
 The engine measures whether failed mechanisms lose future causal authority.
 
-**Primary metrics**
+### Primary Metrics
 
 - Authority Retention Ratio (ARR)
 - Mechanism Authority Half-Life
@@ -252,7 +252,7 @@ The **Reality-Adversarial Hypothesis Updating (RAHU)** benchmark evaluates adapt
 
 RAHU measures whether invalidated mechanisms lose operational influence after empirical failure.
 
-**Primary observables**
+### Primary Observables
 
 - Latent Branch Ratio (LBR)
 - Post-error confidence (**$C_{\text{post}}$**)
@@ -262,6 +262,7 @@ RAHU measures whether invalidated mechanisms lose operational influence after em
 - Adaptive Decoupling Index (ADI)
 - Adaptive Corrigibility Score (ACS)
 - Adaptive response latency (**$\tau_{\text{adapt}}$**)
+
 ---
 
 # Evaluation Metrics
